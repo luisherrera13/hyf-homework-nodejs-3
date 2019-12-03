@@ -1,13 +1,9 @@
 var express = require('express');
-
 var app = express();
 
-var app = express();
 app.get('/', function (req, res) {
     res.send('Hello World!');
   });
-  
-//let sample_data = require('../controllers/sample_data.js');
 
   require('./routes.js')(app);
 
