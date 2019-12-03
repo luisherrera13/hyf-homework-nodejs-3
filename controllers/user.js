@@ -11,7 +11,8 @@ exports.add = function(req, res) {
   exports.findById = function(req, res) {
     var user = require('../controllers/sample_data.js')
      var ids=req.params.id;
-for (var i = 0; i<=user.length; i++) {
+     //console.log(ids);
+for (var i = 0; i<=user.length; i++) {//<= my cause some warnings it depends on number of elements of the array
   var currentId = user[i];
   if (currentId.id==ids) {
     res.send(currentId);
@@ -19,6 +20,4 @@ for (var i = 0; i<=user.length; i++) {
 } };//asi como se estructuro esta funcion es capaz de seleccionar un registro del arreglo json pasandole el id
 //exports.findById = function() {};
 
-
-exports.update = function() {};
 exports.delete = function() {};
