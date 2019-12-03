@@ -4,7 +4,6 @@ module.exports = function(app){
     var user = require('../controllers/user');
     app.post('/user', user.add);
     app.get('/user/:id', user.findById);
-    app.put('/user/:id', user.update);
     app.delete('/user/:id', user.delete);
 }
 
